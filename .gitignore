@@ -1,0 +1,58 @@
+# ===============================================================
+# Hackbook_Redmi_G EFI — Git 忽略规则
+# 说明：本仓库是可直接分发的 OpenCore EFI，因此只忽略
+#       系统/编辑器生成的垃圾文件与本地快照，
+#       所有引导必需文件（.efi / .kext / .aml / config.plist 等）均照常提交。
+# ===============================================================
+
+# ---------- macOS 元数据（Finder / AppleDouble / Spotlight） ----------
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100/
+.Trashes/
+.fseventsd/
+.DocumentRevisions-V100/
+.TemporaryItems/
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+Icon?
+*.icloud
+
+# ---------- Windows 系统垃圾 ----------
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# ---------- OpenCore 运行日志 / 临时产物 ----------
+# 调试版 OpenCore 输出的日志、NVRAM 转储、sysreport 结果
+opencore-*.txt
+*.log
+nvram.plist
+SysReport/
+EFI/OC/Logs/
+
+# ---------- 旧配置快照（本地留存，分发不需要） ----------
+EFI/OC/oldConfig.plist
+
+# ---------- 编辑器 / IDE ----------
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-*
+.netrwhist
+
+# ---------- 通用临时文件 / 备份 ----------
+*.bak
+*.tmp
+*.temp
+*.orig
+*.rej
+*~
+*.swp
+*.swo
